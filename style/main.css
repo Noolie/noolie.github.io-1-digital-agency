@@ -1,0 +1,1198 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+body a {
+  text-decoration: none;
+}
+h1 {
+  position: relative;
+  font-size: 45px;
+  color: #ffffff;
+  text-align: center;
+}
+h1 span {
+  color: #7bb515;
+}
+#main {
+  position: relative;
+}
+.logo {
+  position: relative;
+  height: 55px;
+  width: 240px;
+}
+.logo a .green-box {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background: #7bb515;
+  border-radius: 10px;
+  transform: rotateZ(45deg);
+}
+.logo a .white-box {
+  position: absolute;
+  top: 8px;
+  height: 35px;
+  width: 35px;
+  background: #ffffff;
+  transform: rotateZ(45deg);
+  border-radius: 8px;
+  transition: left .3s;
+}
+.logo a p {
+  position: absolute;
+  top: 12px;
+  left: 80px;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: bold;
+  transition: color .2s 80ms;
+}
+.popup-background {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #242424;
+  z-index: 5;
+  opacity: .8;
+}
+.popup-video {
+  display: none;
+  position: fixed;
+  width: 560px;
+  height: 315px;
+  z-index: 6;
+  margin-left: auto;
+  margin-right: auto;
+  right: 0;
+  left: 0;
+  top: 15%;
+  background: black;
+}
+.popup-video iframe {
+  border: 2px solid #7bb515;
+}
+.popup-video .closer {
+  padding: 0px 10px;
+  border: 2px solid #7bb515;
+  color: #7bb515;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: -41px;
+  top: -39px;
+  transition: color .2s;
+}
+.popup-video .closer:hover {
+  color: #ffffff;
+}
+.sub-logo {
+  height: 30px;
+  width: 30px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 2px solid #7ac12c;
+  transform: rotate(45deg);
+  margin: 0 auto;
+}
+.regular-button {
+  position: relative;
+  height: 90px;
+  width: 325px;
+  background: #7bb515;
+  border-radius: 12px;
+  cursor: pointer;
+  outline: none;
+}
+.regular-button p {
+  color: #ffffff;
+  font-size: 22px;
+  text-align: center;
+  line-height: 92px;
+  font-weight: bold;
+}
+.simple-text {
+  font-size: 23px;
+  color: #ffffff;
+  text-align: center;
+}
+.star-around {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  background: #7bb515;
+  transform: rotate(45deg);
+  border-radius: 3px;
+}
+.hidden-youtube-link {
+  display: none;
+  height: 76px;
+  width: 76px;
+  margin: 20px auto 0;
+  border-radius: 50%;
+}
+.hidden-youtube-link .hidden-play-button {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 70px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  transition: background .3s;
+}
+.hidden-youtube-link .hidden-play-button .hidden-triangle-button {
+  border-top: 14px solid transparent;
+  border-left: 28px solid #7bb515;
+  border-bottom: 14px solid transparent;
+  position: relative;
+  top: 23px;
+  left: 24px;
+  width: 20px;
+  transition: border .3s;
+}
+.hidden-youtube-link:hover .hidden-play-button {
+  background: rgba(0, 0, 0, 0.5);
+}
+.hidden-youtube-link:hover .hidden-play-button .hidden-triangle-button {
+  border-left-color: #ffffff;
+}
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../image/background.png') no-repeat center;
+  background-size: cover;
+  position: relative;
+  padding-top: 35px;
+  padding-bottom: 145px;
+}
+.header .logo {
+  margin-top: 21px;
+  float: left;
+  margin-left: 150px;
+}
+.header .nav {
+  position: relative;
+  display: block;
+  width: 600px;
+  margin: 35px auto 0;
+}
+.header .nav a {
+  font-size: 21px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-right: 75px;
+}
+.header .nav a:last-child {
+  margin-right: 0px;
+}
+.header .regular-button {
+  float: right;
+  margin-right: 150px;
+  margin-top: -57px;
+}
+.header h1 {
+  clear: both;
+  margin-top: 150px;
+}
+.header .simple-text {
+  width: 770px;
+  margin: 75px auto 0;
+}
+.header .play-button {
+  poisition: relative;
+  height: 100px;
+  width: 100px;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 60px auto 0;
+  transition: background .3s;
+  cursor: pointer;
+}
+.header .play-button .triangle-button {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-left: 36px solid #7bb515;
+  border-bottom: 18px solid transparent;
+  margin: 30px 0 0 33px;
+}
+.header .simple-text:last-child {
+  width: auto;
+  margin-top: 35px;
+  font-style: italic;
+  font-size: 19px;
+}
+.packages {
+  padding-top: 75px;
+  position: relative;
+  background: #7bb515;
+}
+.packages h1 {
+  font-size: 48px;
+}
+.packages .simple-text {
+  margin: 40px 310px 0;
+}
+.packages .prices {
+  display: block;
+  position: relative;
+  column-count: 3;
+  margin: 55px auto 0;
+}
+.packages .prices .pack {
+  background: #242424;
+  width: 500px;
+  padding: 60px 0 52px;
+  margin: auto;
+}
+.packages .prices .pack .pack-icon {
+  position: relative;
+  width: 160px;
+  height: 205px;
+  margin: 0 auto;
+}
+.packages .prices .pack .pack-icon .pack-image {
+  display: block;
+  margin: auto;
+  height: 205px;
+  width: 160px;
+}
+.packages .prices .pack .pack-number {
+  font-size: 27px;
+  color: #817f7f;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 85px;
+  letter-spacing: 6px;
+  text-align: center;
+}
+.packages .prices .pack .pack-name {
+  font-size: 53px;
+  margin-top: 25px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.packages .prices .pack .pack-description {
+  font-size: 25px;
+  color: #ffffff;
+  margin-top: 35px;
+  text-align: center;
+}
+.packages .prices .pack .pack-price {
+  font-size: 66px;
+  color: #7bb515;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+.packages .prices .pack .regular-button {
+  margin: 60px auto 0;
+  background: #7ac12c;
+}
+.packages .prices .pack .regular-button p {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.packages .prices .hero .pack-icon {
+  height: 200px;
+  width: 225px;
+}
+.packages .prices .hero .pack-icon .pack-image {
+  height: 200px;
+  width: 225px;
+}
+.offers {
+  position: relative;
+  padding: 65px 0;
+  background: #ffffff;
+}
+.offers h1 {
+  color: #242424;
+  font-size: 48px;
+  margin-top: 40px;
+}
+.offers .simple-text {
+  color: #242424;
+  margin: 45px 310px 0;
+}
+.offers .options {
+  column-count: 3;
+  column-width: 380px;
+  margin: 80px auto 0;
+}
+.offers .options .edition .round-border {
+  height: 100px;
+  width: 100px;
+  border: 4px solid #7ac12c;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.offers .options .edition .round-border img {
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+}
+.offers .options .edition h2 {
+  font-size: 29px;
+  text-align: center;
+  color: #7ac12c;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+.offers .options .edition p {
+  font-size: 19px;
+  color: #797979;
+  text-align: center;
+  margin: 30px auto 0;
+  width: 380px;
+}
+.offers .options .edition:nth-child(even) .round-border {
+  margin-top: 65px;
+}
+.offers .options .edition:nth-child(5) .round-border img,
+.offers .options .edition:nth-child(6) .round-border img {
+  margin-top: 20px;
+}
+.offers .regular-button {
+  background: #7ac12c;
+  float: left;
+  margin: 100px 0 82px 300px;
+}
+.offers .regular-button:last-child {
+  background: none;
+  border: 3px solid #7ac12c;
+  box-sizing: border-box;
+  float: right;
+  margin: 100px 300px 0 0;
+}
+.offers .regular-button:last-child p {
+  text-transform: uppercase;
+  color: #7ac12c;
+  font-size: 23px;
+  line-height: 87px;
+}
+.package-overview {
+  clear: both;
+  background: #242424;
+  position: relative;
+  padding: 65px 0 140px;
+}
+.package-overview h1 {
+  margin-top: 40px;
+  font-size: 48px;
+}
+.package-overview .simple-text {
+  margin: 45px 310px 0;
+}
+.package-overview table {
+  margin: 140px auto 0;
+}
+.package-overview table tr th {
+  font-size: 38px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.package-overview table tr th:first-child {
+  padding: 30px;
+  font-size: 24px;
+  text-transform: capitalize;
+  background: #7ac12c;
+}
+.package-overview table tr td {
+  padding: 40px;
+  border: 1px solid #7ac12c;
+  box-sizing: border-box;
+  font-size: 38px;
+  color: #ffffff;
+  text-align: center;
+}
+.package-overview table tr .button-section {
+  border: none;
+}
+.package-overview table tr .button-section .regular-button {
+  margin: auto;
+}
+.package-overview table tr .button-section .regular-button p {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+.clients {
+  padding: 65px 0 105px;
+}
+.clients h1 {
+  margin-top: 45px;
+  color: #242424;
+}
+.clients .simple-text {
+  margin: 40px 310px 0;
+  color: #242424;
+}
+.clients .client-logos {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  margin-top: 85px;
+}
+.clients .client-logos a {
+  display: inline-block;
+  margin: 20px 50px 0 0;
+}
+.clients .client-logos a img {
+  height: 35px;
+  transition: opacity .2s;
+}
+.clients .client-logos a:last-child {
+  margin-right: 0;
+}
+.footer {
+  padding: 62px 0;
+  background: #242424;
+}
+.footer .foot-nav {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+.footer .foot-nav a {
+  font-size: 17px;
+  margin-right: 80px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+.footer .foot-nav a:last-child {
+  margin-right: 0;
+}
+.footer .foot-nav a:nth-child(4) {
+  text-transform: uppercase;
+}
+.footer .logo {
+  margin: 60px auto 0;
+}
+.nav a:hover,
+.foot-nav a:hover {
+  color: #7bb515;
+}
+.regular-button:hover p {
+  color: #242424;
+}
+.offers .regular-button:last-child:hover {
+  color: #242424;
+  border-color: #242424;
+}
+.offers .regular-button:last-child:hover p {
+  color: #242424;
+}
+.client-logos img:hover {
+  opacity: .5;
+}
+@media only screen and (max-width: 1700px) {
+  .header .logo {
+    margin-left: 100px;
+  }
+  .header .regular-button {
+    margin-right: 50px;
+  }
+  .packages .prices .pack {
+    width: 450px;
+  }
+  .package-overview table tr td {
+    padding: 30px 10px;
+  }
+}
+@media only screen and (max-width: 1430px) {
+  .header {
+    padding-bottom: 70px;
+  }
+  .header .logo {
+    margin-left: 50px;
+  }
+  .header h1 {
+    margin-top: 120px;
+  }
+  .header .nav {
+    width: 530px;
+  }
+  .header .nav a {
+    margin-right: 50px;
+  }
+  .header .nav a:last-child {
+    margin-right: 0px;
+  }
+  .packages .prices .pack {
+    width: 415px;
+    padding: 40px 0 30px;
+  }
+  .packages .prices .pack .pack-number {
+    margin-top: 45px;
+  }
+  .packages .prices .pack .pack-description {
+    margin: 35px 15px 0;
+  }
+  .packages .prices .pack .pack-price {
+    margin-top: 30px;
+  }
+  .packages .prices .pack .regular-button {
+    margin: 30px auto 0;
+    height: 90px;
+    width: 290px;
+  }
+  .package-overview table {
+    margin: 100px auto 0;
+  }
+  .package-overview table tr th:first-child {
+    padding: 20px;
+  }
+  .package-overview table tr td {
+    padding: 30px 10px;
+  }
+  .package-overview table tr .button-section .regular-button {
+    height: 90px;
+    width: 290px;
+  }
+  .clients {
+    padding: 65px 0 85px;
+  }
+  .clients .client-logos {
+    margin-top: 45px;
+  }
+  .packages .simple-text,
+  .offers .simple-text,
+  .package-overview .simple-text,
+  .clients .simple-text {
+    margin: 40px 150px 0;
+  }
+}
+@media only screen and (max-width: 1315px) {
+  .header .regular-button {
+    width: 280px;
+    margin-right: 40px;
+  }
+  .header .logo {
+    margin-left: 40px;
+  }
+  .header .nav {
+    width: 470px;
+  }
+  .header .nav a {
+    margin-right: 30px;
+  }
+  .header .nav a:last-child {
+    margin-right: 0px;
+  }
+  .packages {
+    padding-top: 50px;
+  }
+  .packages .prices .pack {
+    width: 370px;
+  }
+  .packages .prices .pack .pack-icon {
+    width: 180px;
+    height: 175px;
+  }
+  .packages .prices .pack .pack-icon .pack-image {
+    width: 140px;
+    height: 185px;
+  }
+  .packages .prices .pack .pack-number {
+    font-size: 25px;
+  }
+  .packages .prices .pack .pack-name {
+    font-size: 48px;
+  }
+  .packages .prices .pack .pack-description {
+    font-size: 22px;
+  }
+  .packages .prices .pack .pack-price {
+    font-size: 55px;
+    margin-top: 20px;
+  }
+  .packages .prices .pack .regular-button {
+    width: 250px;
+    height: 80px;
+  }
+  .packages .prices .pack .regular-button p {
+    line-height: 82px;
+  }
+  .offers .options {
+    column-width: 340px;
+  }
+  .offers .options .edition p {
+    width: 340px;
+  }
+  .offers .regular-button {
+    margin: 80px 0 60px 200px;
+  }
+  .offers .regular-button:last-child {
+    margin: 80px 200px 60px 0px;
+  }
+  .package-overview table tr .button-section .regular-button {
+    width: 250px;
+    height: 80px;
+  }
+  .package-overview table tr .button-section .regular-button p {
+    line-height: 82px;
+  }
+  .footer .foot-nav a {
+    margin-right: 50px;
+  }
+  .footer .foot-nav a:last-child {
+    margin-right: 0px;
+  }
+  .packages .prices .hero .pack-icon {
+    height: 180px;
+    width: 205px;
+  }
+  .packages .prices .hero .pack-icon .pack-image {
+    height: 180px;
+    width: 205px;
+  }
+  .packages .simple-text,
+  .offers .simple-text,
+  .package-overview .simple-text,
+  .clients .simple-text {
+    margin: 40px 80px 0;
+  }
+}
+@media only screen and (max-width: 1170px) {
+  .header h1 {
+    margin-top: 100px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  .header .simple-text {
+    margin-top: 40px;
+  }
+  .header .regular-button {
+    width: 250px;
+    height: 75px;
+    margin-right: 20px;
+    margin-top: -48px;
+  }
+  .header .regular-button p {
+    font-size: 20px;
+    line-height: 78px;
+  }
+  .header .logo {
+    margin-left: 20px;
+  }
+  .header .nav {
+    width: 420px;
+    margin-top: 36px;
+  }
+  .header .nav a {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+  .header .nav a:last-child {
+    margin-right: 0px;
+  }
+  .packages {
+    padding-top: 50px;
+  }
+  .packages .prices .pack {
+    width: 325px;
+  }
+  .packages .prices .pack .pack-name {
+    letter-spacing: 4px;
+  }
+  .packages .prices .pack .pack-description {
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 22px;
+  }
+  .offers .options {
+    margin: 40px auto 0;
+    column-width: 300px;
+  }
+  .offers .options .edition p {
+    width: 300px;
+  }
+  .offers .regular-button {
+    margin: 80px 0 60px 120px;
+  }
+  .offers .regular-button:last-child {
+    margin: 80px 120px 60px 0px;
+  }
+  .package-overview {
+    padding-bottom: 90px;
+  }
+  .package-overview table {
+    margin: 90px auto 0;
+  }
+  .package-overview table tr th {
+    font-size: 30px;
+  }
+  .package-overview table tr th:first-child {
+    font-size: 22px;
+    padding: 10px 5px;
+  }
+  .package-overview table tr td {
+    font-size: 30px;
+  }
+  .package-overview table tr .button-section .regular-button {
+    width: 220px;
+    height: 80px;
+  }
+  .package-overview table tr .button-section .regular-button p {
+    line-height: 82px;
+  }
+  .packages .simple-text,
+  .offers .simple-text,
+  .package-overview .simple-text,
+  .clients .simple-text {
+    margin: 40px 40px 0;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  h1,
+  .offers h1,
+  .packages h1,
+  .package-overview h1,
+  .clients h1 {
+    font-size: 34px;
+  }
+  .packages .simple-text,
+  .offers .simple-text,
+  .package-overview .simple-text,
+  .clients .simple-text {
+    margin: 30px 15px 0;
+  }
+  .star-around {
+    display: none;
+  }
+  .simple-text {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .header {
+    padding-bottom: 40px;
+  }
+  .header h1 {
+    margin: 110px 30px 0;
+  }
+  .header .logo {
+    margin-top: 0px;
+  }
+  .header .regular-button {
+    position: absolute;
+    float: none;
+    right: 20px;
+    top: 25px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+  .header .nav {
+    float: right;
+    margin-right: 270px;
+    width: 230px;
+    margin-top: 4px;
+  }
+  .header .play-button {
+    margin: 30px auto 0;
+    height: 80px;
+    width: 80px;
+    border-width: 3px;
+  }
+  .header .play-button .triangle-button {
+    margin: 21px 0 0 25px;
+  }
+  .header .simple-text:last-child {
+    margin-top: 30px;
+  }
+  .packages {
+    padding-top: 30px;
+  }
+  .packages h1 {
+    margin-top: 5px;
+  }
+  .packages .prices {
+    margin-top: 30px;
+  }
+  .packages .prices .pack {
+    width: 240px;
+    padding: 20px 0 20px;
+  }
+  .packages .prices .pack .pack-icon {
+    position: absolute;
+    opacity: .1;
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .packages .prices .pack .pack-number {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  .packages .prices .pack .pack-name {
+    font-size: 34px;
+    margin-top: 20px;
+  }
+  .packages .prices .pack .pack-description {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .packages .prices .pack .pack-price {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  .packages .prices .pack .regular-button {
+    margin-top: 25px;
+    height: 50px;
+    width: 180px;
+  }
+  .packages .prices .pack .regular-button p {
+    font-size: 20px;
+    line-height: 52px;
+  }
+  .packages .prices .hero .pack-icon {
+    margin-left: 16px;
+    margin-top: 10px;
+  }
+  .offers {
+    padding-top: 34px;
+  }
+  .offers h1 {
+    margin-top: 20px;
+  }
+  .offers .options {
+    column-width: 220px;
+  }
+  .offers .options .edition h2 {
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  .offers .options .edition p {
+    width: 220px;
+    margin-top: 20px;
+  }
+  .offers .regular-button {
+    width: 250px;
+    height: 75px;
+    margin: 40px 0px 40px 80px;
+  }
+  .offers .regular-button p {
+    font-size: 20px;
+    line-height: 78px;
+  }
+  .offers .regular-button:last-child {
+    margin: 40px 80px 40px 0;
+  }
+  .offers .regular-button:last-child p {
+    font-size: 20px;
+    line-height: 72px;
+  }
+  .package-overview {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+  .package-overview h1 {
+    margin-top: 20px;
+  }
+  .package-overview table {
+    margin-top: 50px;
+  }
+  .package-overview table tr th {
+    font-size: 24px;
+  }
+  .package-overview table tr th:first-child {
+    font-size: 20px;
+  }
+  .package-overview table tr td {
+    font-size: 24px;
+    padding: 20px;
+  }
+  .package-overview table tr .button-section {
+    padding: 10px;
+  }
+  .package-overview table tr .button-section .regular-button {
+    height: 50px;
+    width: 160px;
+  }
+  .package-overview table tr .button-section .regular-button p {
+    font-size: 20px;
+    line-height: 50px;
+  }
+  .clients {
+    padding: 34px;
+  }
+  .clients h1 {
+    margin-top: 20px;
+  }
+  .clients .client-logos {
+    margin-top: 20px;
+  }
+  .clients .client-logos a img {
+    height: 30px;
+  }
+  .footer {
+    padding: 40px 0;
+  }
+  .footer .foot-nav a {
+    margin-right: 25px;
+  }
+  .footer .foot-nav a:last-child {
+    margin-right: 0;
+  }
+  .footer .logo {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 799px) {
+  .hidden-youtube-link {
+    display: block;
+  }
+  .header {
+    padding: 20px 0;
+  }
+  .header .logo {
+    float: none;
+    margin: 0 auto;
+  }
+  .header .nav {
+    float: none;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 0;
+  }
+  .header .regular-button {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
+  }
+  .header h1 {
+    margin: 20px auto 0;
+    font-size: 24px;
+  }
+  .header .simple-text {
+    font-size: 16px;
+    width: auto;
+    margin: 20px 10px;
+  }
+  .header .play-button {
+    display: none;
+  }
+  .header .simple-text:last-child {
+    margin-top: 20px;
+  }
+  .packages {
+    padding-top: 20px;
+  }
+  .packages h1 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  .packages .simple-text {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .packages .prices {
+    column-count: 1;
+  }
+  .packages .prices .pack {
+    width: auto;
+    border-bottom: 1px solid #ffffff;
+  }
+  .packages .prices .pack .pack-icon {
+    position: relative;
+    margin: 0 auto;
+    opacity: 1;
+    width: 80px;
+    height: 100px;
+  }
+  .packages .prices .pack .pack-icon .pack-image {
+    width: 80px;
+    height: 100px;
+  }
+  .packages .prices .pack .pack-number {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  .packages .prices .pack .pack-name {
+    font-size: 24px;
+    margin-top: 15px;
+  }
+  .packages .prices .pack .pack-description {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  .packages .prices .pack .pack-price {
+    margin-top: 15px;
+    font-size: 24px;
+  }
+  .packages .prices .hero .pack-icon {
+    height: 100px;
+    width: 112px;
+  }
+  .packages .prices .hero .pack-icon .pack-image {
+    height: 100px;
+    width: 112px;
+  }
+  .offers {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .offers h1 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .offers .simple-text {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .offers .options {
+    column-count: auto;
+    column-width: auto;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0;
+  }
+  .offers .options .edition {
+    width: 150px;
+    display: inline-block;
+    margin: 10px 20px;
+  }
+  .offers .options .edition .round-border {
+    margin-top: 0px;
+  }
+  .offers .options .edition h2 {
+    font-size: 20px;
+  }
+  .offers .options .edition p {
+    font-size: 16px;
+    width: auto;
+  }
+  .offers .options .edition:nth-child(even) .round-border {
+    margin-top: 0px;
+  }
+  .offers .options .edition:nth-child(5) .round-border img,
+  .offers .options .edition:nth-child(6) .round-border img {
+    margin-top: 20px;
+  }
+  .offers .regular-button {
+    float: none;
+    margin: 20px auto 0;
+  }
+  .offers .regular-button:last-child {
+    float: none;
+    margin: 20px auto 0;
+  }
+  .package-overview {
+    padding: 20px 0;
+    overflow-x: auto;
+  }
+  .package-overview h1 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .package-overview .simple-text {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .package-overview table {
+    margin: 20px auto 0;
+  }
+  .package-overview table tr th {
+    font-size: 16px;
+  }
+  .package-overview table tr th:first-child {
+    padding: 5px;
+    font-size: 14px;
+  }
+  .package-overview table tr td {
+    font-size: 14px;
+    padding: 20px 0;
+  }
+  .package-overview table tr .button-section .regular-button {
+    height: 40px;
+    width: 80px;
+  }
+  .package-overview table tr .button-section .regular-button p {
+    font-size: 14px;
+    line-height: 42px;
+  }
+  .clients {
+    padding: 20px 0;
+  }
+  .clients h1 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .clients .simple-text {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  .clients .client-logos {
+    margin-top: 10px;
+  }
+  .clients .client-logos a {
+    margin: 10px 10px;
+  }
+  .clients .client-logos a img {
+    height: 20px;
+  }
+  .footer {
+    padding: 20px 0;
+  }
+  .footer .logo {
+    margin-top: 20px;
+  }
+  .footer .foot-nav a {
+    font-size: 20px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .offers {
+    overflow-x: auto;
+  }
+  .offers .options {
+    display: inline-block;
+  }
+  .offers .options .edition {
+    width: 120px;
+  }
+}
+.opacityDown {
+  background: rgba(0, 0, 0, 0.48);
+}
+.rotate {
+  -o-transform-origin: 13px 18px;
+  -webkit-transform-origin: 13px 18px;
+  -moz-transform-origin: 13px 18px;
+  -ms-transform-origin: 13px 18px;
+  transform-origin: 13px 18px;
+  -o-animation: rotateTriangle 1s ease-in-out infinite;
+  -webkit-animation: rotateTriangle 1s ease-in-out infinite;
+  -moz-animation: rotateTriangle 1s ease-in-out infinite;
+  -ms-animation: rotateTriangle 1s ease-in-out infinite;
+  animation: rotateTriangle 1s ease-in-out infinite;
+}
+@keyframes rotateTriangle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
